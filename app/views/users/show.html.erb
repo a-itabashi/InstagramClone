@@ -11,11 +11,15 @@
   </tr>
   <tr>
     <th>あなたのイメージ</th>
-    <td><%= image_tag(@user.user_image.url) %>
+    <td><%= image_tag(@user.user_image.url) if @user.user_image && @user.user_image.url %>
   </tr>
 </table>
-<div class="row center-block text-center">
+<div class="row text-center">
+  <div class="col-md-6 col-xs-6">
     <td><%= link_to "プロフィールを更新する", edit_user_path(@user.id) %></td>
+  </div>
+  <div class="col-md-6 col-xs-6">
     <td><%= link_to "退会する", user_path(@user.id), method: :delete, data: {confirm: "本当に退会しますか？"} %></td>
+  </div>
 </div>
 &nbsp

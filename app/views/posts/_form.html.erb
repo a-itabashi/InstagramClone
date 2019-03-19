@@ -11,14 +11,14 @@
 
   <table class="table">
     <tr>
-      <th><%= f.label :title,"題名" %></th>
-      <td><%= f.text_field :title %></td>
+      <th class="col-md-4 col-xs-4"><%= f.label :title,"題名" %></th>
+      <td class="col-md-8 col-xs-8"><%= f.text_field :title %></td>
     </tr>
-      <th><%= f.label :content,"内容" %></th>
-      <td><%= f.text_area :content %></td>
+      <th class="col-md-4 col-xs-4"><%= f.label :content,"内容" %></th>
+      <td class="col-md-8 col-xs-8"><%= f.text_area :content %></td>
     <tr>
-      <th><%= f.label :image,"画像" %></th>
-      <td>
+      <th class="col-md-4 col-xs-4"><%= f.label :image,"画像" %></th>
+      <td class="col-md-8 col-xs-8">
         <%= image_tag(@post.post_image.url) if @post.post_image && @post.post_image.url %>
         <%= f.file_field :image %>
         <%= f.hidden_field :image_cache %>

@@ -11,6 +11,11 @@
   </head> 
   <body>
     <div class="container"> 
+      <% flash.each do |message_type, message| %>
+          <div class="header-msg">
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          </div>
+      <% end %>
       <div class="top">
         <div class="row">
           <div class="col-md-4 col-xs-12">

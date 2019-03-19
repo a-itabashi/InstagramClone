@@ -26,10 +26,22 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @user.authenticate(params[:user][:password])
+      @user.update(user_params)
+      flash[:success] = "プロフィールを編集しました"
+      redirect_to user_path(@user.id)
+    else
+      flash.now[:info] = "ご自身のパスワードをもう一度入力してください"
+      render 'edit'
+    end
 
   end
 
   def destroy
+    @user.destroy
+    session.delete(:user_id)
+    flash[:info] = "今までありがとうございました"
+    redirect_to root_path
   end
 
   private

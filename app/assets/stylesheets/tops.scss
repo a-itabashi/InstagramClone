@@ -14,7 +14,7 @@ body{
 }
 
 .top{
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
 .footer{
@@ -30,6 +30,7 @@ body{
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  font-family: 'Amatic SC', cursive;
 }
 
 
@@ -94,9 +95,62 @@ body{
 }
 
 .container-fluid>.navbar-header{
-  height: 55px;
+  height: 50px;
 }
 
+.table{
+  text-align: center;
+}
 
+.table th{
+  text-align: center;
+}
+
+.table tr{
+  height:100px;
+}
+
+label{
+  padding-top: 30px;
+}
+
+input[type="text"]{
+  width:300px;
+  height:30px; 
+  margin-top: 30px;
+}
+
+input[type="submit"]{
+  width:150px;
+  height:30px; 
+}
+
+input[type="email"]{
+  width:300px;
+  height:30px; 
+}
+
+input[type="file"]{
+  width:300px;
+  height:30px; 
+}
+
+input[type="password"]{
+  width:300px;
+  height:30px; 
+}
+
+textarea{
+  width:350px;
+  height:200px;
+}
+
+form{
+  padding-left:15%;
+}
+
+.edit-submit{
+  padding-left:5%;
+}
 
 
