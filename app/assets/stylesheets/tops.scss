@@ -1,0 +1,39 @@
+html{
+  height:100%;
+}
+
+body{
+  height: 100%;
+  background-color: #FAFAFA;
+}
+
+.container{
+  min-height: 100%;
+  position:relative;
+  padding-bottom: 30px;
+}
+
+.top{
+  padding-top: 5%;
+}
+
+.footer{
+  height:30px;
+  background-color: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+  display: table;
+  width:100%;
+}
+
+.footer p{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+.container-fluid{
+  padding: 0;
+  position: relative;;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InstagramClone</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width">
+  </head> 
+  <body>
+    <div class="container"> 
+      <div class="top">
+        <div class="row">
+          <div class="col-md-4 col-xs-6">
+            <%= image_tag('/images/top_1.jpg', class:"img-responsive") %>
+          </div>
+          <div class="col-md-4 col-xs-6">
+          <%= image_tag('/images/top_2.jpg', class:"img-responsive") %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to "ログイン" %>
+            <%= link_to "会員登録" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <footer class="footer">
+        <p>Powered by Aguru Itabashi</p>
+      </footer>
+    </div>
+  </body>
+</html>
