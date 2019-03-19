@@ -1,46 +1,19 @@
 <h2>ログインフォーム</h2>
 &nbsp
-<%= form_with(scope: :session, url:  local: true) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger">
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="border col-7">
+<%= form_with(scope: :session, url: sessions_path,local: true) do |f| %>
     <div class="row">
       <div class="col-md-12 col-xs-12">
-          <div class="form-group">
-            <%= f.label :name, "お名前" %>
-            <%= f.text_field :name, class:"form-control" ,placeholder: "すずき　たろう" %>
-          </div>
           <div class="form-group">
             <%= f.label :email, "メールアドレス" %>
             <%= f.email_field :email, class:"form-control" ,placeholder: "info@example.com" %>
           </div>
           <div class="form-group">
-            <%= f.label :user_image, "あなたのイメージ画像" %>
-            <%= f.file_field :user_image, class:"form-control" ,placeholder: "info@example.com" %>
-            <%= f.hidden_field :user_image_cache %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password, "ご希望のパスワード" %>
-            <%= f.password_field :password, class:"form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password, "もう一度ご希望のパスワードを入力してください" %>
+            <%= f.label :password, "パスワード" %>
             <%= f.password_field :password, class:"form-control" %>
           </div>
       </div>
-    </div>
-    
+    </div>    
     <div class="row center-block text-center">
-      <div class="col-5">
-        <%= f.submit "新規登録" %>
-      </div>
+        <%= f.submit "ログイン" %>
     </div>
-  </div>
 <% end %>

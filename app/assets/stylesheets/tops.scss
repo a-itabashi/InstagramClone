@@ -39,7 +39,9 @@ body{
 }
 
 .navbar-brand{
-  padding-left:40px;
+  padding-left: 50px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem;
 }
 
 .top-title{
@@ -50,7 +52,7 @@ body{
   padding: 0.2em 0.5em;
   color: #454545;
   font-family: 'Amatic SC', cursive;
-  font-size:4rem;
+  font-size:3rem;
   text-align: center;
 }
 
@@ -77,6 +79,10 @@ body{
   text-align: center;
 }
 
+.header-msg{
+  text-align: center;
+}
+
 @media screen and (min-width:992px) {
     /*　画面サイズが992px以下の場合読み込む　*/
     .top-login {margin-top: 100px;}
@@ -85,6 +91,10 @@ body{
 @media screen and (min-width:992px) {
     /*　画面サイズが992px以下の場合読み込む　*/
     .top-register {margin-top: 100px;}
+}
+
+.container-fluid>.navbar-header{
+  height: 55px;
 }
 
 
