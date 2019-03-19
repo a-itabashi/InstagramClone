@@ -6,21 +6,31 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet">
     <meta name="viewport" content="width=device-width">
   </head> 
   <body>
     <div class="container"> 
       <div class="top">
         <div class="row">
+          <div class="col-md-4 col-xs-12">
+            <div class = "top-title">
+              InstagramClone
+            </div>
+            <div class="row top-login_register">
+              <div class="col-md-12 col-xs-6 top-login">
+                <%= link_to "ログイン", sessions_new_path, class: "btn btn-default btn-lg" %>
+              </div>
+              <div class="col-md-12 col-xs-6 top-register">
+                <%= link_to "会員登録", new_user_path, class: "btn btn-default btn-lg" %>
+              </div>
+            </div>
+          </div>
           <div class="col-md-4 col-xs-6">
             <%= image_tag('/images/top_1.jpg', class:"img-responsive") %>
           </div>
           <div class="col-md-4 col-xs-6">
           <%= image_tag('/images/top_2.jpg', class:"img-responsive") %>
-          </div>
-          <div class="col-md-4">
-            <%= link_to "ログイン" %>
-            <%= link_to "会員登録" %>
           </div>
         </div>
       </div>

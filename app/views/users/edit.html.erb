@@ -1,4 +1,4 @@
-<h2>登録フォーム</h2>
+<h2>プロフィール編集</h2>
 &nbsp
 <%= form_with(model: @user, local: true) do |f| %>
   <% if @user.errors.any? %>
@@ -23,6 +23,8 @@
           </div>
           <div class="form-group">
             <%= f.label :user_image, "あなたのイメージ画像" %>
+            <%= image_tag(@user.user_image.url) if @user.user_image && @user.user_image.url %>
+            <p class="edit_image">イメージ画像の更新はこちらから</p>
             <%= f.file_field :user_image, class:"form-control" ,placeholder: "info@example.com" %>
             <%= f.hidden_field :user_image_cache %>
           </div>
