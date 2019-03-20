@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
+      ContactMailer.contact_mail(@post).deliver
       flash[:success] = "投稿が完了しました"
       redirect_to posts_path
     else
@@ -39,7 +40,7 @@ class PostsController < ApplicationController
   end
 
   private
-  
+
   def post_params
     params.require(:post).permit(:title, :content, :post_image, :post_image_cache)
   end

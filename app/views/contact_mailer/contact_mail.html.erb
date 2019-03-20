@@ -1,0 +1,7 @@
+<h1>投稿が完了しました</h1>
+<h4>タイトル</h4>
+<h2><%= @post.title %></h2>
+<h4>投稿文</h4>
+<h2><%= @post.content%></h2>
+
+<%= image_tag(@post.post_image.url) if @post.post_image && @post.post_image.url %>

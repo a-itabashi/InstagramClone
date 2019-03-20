@@ -6,8 +6,6 @@ Rails.application.routes.draw do
     end
   end
 
-
-
   resources :sessions, only: [:new, :create, :destroy]
   
   resources :posts do
@@ -18,4 +16,5 @@ Rails.application.routes.draw do
 
   resources :favorites, only: [:create, :destroy]
 
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end

@@ -9,6 +9,8 @@ class SessionsController < ApplicationController
       flash[:success] = "ログインしました"
       redirect_to posts_path
     else
+      session.delete(:user_id)
+      flash.now[:info] = "もう一度入力し直してください。"
       render 'new'
     end
   end
