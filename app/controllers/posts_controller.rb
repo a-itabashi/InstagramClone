@@ -45,6 +45,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post.destroy
+    flash[:info] = "投稿が削除されました"
+    redirect_to posts_path
   end
 
   private
