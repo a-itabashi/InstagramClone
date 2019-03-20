@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   root to: 'tops#index'
-  resources :users
+  resources :users do
+    member do
+      get :likes
+    end
+  end
+
+
+
   resources :sessions, only: [:new, :create, :destroy]
   
   resources :posts do
@@ -8,5 +15,7 @@ Rails.application.routes.draw do
      post :confirm
    end
   end
+
+  resources :favorites, only: [:create, :destroy]
 
 end

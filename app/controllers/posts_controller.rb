@@ -19,7 +19,12 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
+  end
 
+  def show
+    @post = Post.find(params[:id])
+    @favorite = current_user.favorites.find_by(post_id: @post.id)
+    @favorites = Favorite.where(post_id: @post.id)
   end
 
   def confirm
@@ -33,6 +38,8 @@ class PostsController < ApplicationController
   def update
   end
 
+  private
+  
   def post_params
     params.require(:post).permit(:title, :content, :post_image, :post_image_cache)
   end

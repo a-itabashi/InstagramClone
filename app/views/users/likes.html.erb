@@ -1,0 +1,15 @@
+<h1>お気に入りした投稿一覧</h1>
+
+<% @favorites.each do |favorite| %>
+  <div class="likes-content">
+    <div>
+      <p>投稿者: <%= favorite.post.user.name %></p>
+    </div>
+    <div>
+      <%= image_tag(favorite.post.post_image) if favorite.post.post_image && favorite.post.post_image.url %>
+    </div>
+    <div>
+      <%= favorite.post.content %>
+    </div>
+  </div>
+<% end %>

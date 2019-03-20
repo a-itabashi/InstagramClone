@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_params, only:[:edit, :show, :update, :destroy]
+  before_action :set_params, only:[:edit, :show, :update, :destroy, :likes]
 
   def index
   end
@@ -20,6 +20,10 @@ class UsersController < ApplicationController
   end
 
   def show
+  end
+
+  def likes
+    @favorites = @user.favorites
   end
 
   def edit
