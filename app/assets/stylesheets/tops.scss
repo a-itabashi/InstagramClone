@@ -17,6 +17,11 @@ body{
   padding-top: 10%;
 }
 
+.top-coment{
+  font-family: 'Amatic SC', cursive;
+  font-size :1.4rem;
+}
+
 .footer{
   height:30px;
   background-color: #FFFFFF;
@@ -152,5 +157,41 @@ form{
 .edit-submit{
   padding-left:5%;
 }
+
+/*Post一覧画面*/
+.part-article{
+  margin-bottom: 30px;
+}
+
+.member-img{
+  border-radius: 50%; 
+  width:  70px;       
+  height: 70px;   
+}
+
+.member-name{
+  font-size: 1.5rem;
+}
+
+.post-content{
+  font-size: 2rem;
+  height:auto;
+  padding-left: 10px;
+}
+
+.part-article{
+  border: 1px solid #e6e6e6;
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
 
 

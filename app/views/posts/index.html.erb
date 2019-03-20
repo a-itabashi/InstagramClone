@@ -1,1 +1,22 @@
-index.html.erb
+
+
+
+
+<article class="article">
+  <% @posts.each do |post| %>
+    <div class="part-article">
+      <div class="header-title">
+        <%= image_tag(post.user.user_image, class: "member-img") if post.user.user_image && post.user.user_image.url %>
+        <span class="member-name"><%= post.user.name %></span>
+      </div>
+      <div class="post-image">
+        <%= image_tag(post.post_image.url) if post.post_image && post.post_image.url %>
+      </div>
+      <div class="like-mark"></div>
+      <div class="post-content">
+        <%= post.content %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

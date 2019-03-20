@@ -17,11 +17,11 @@
       <th class="col-md-4 col-xs-4"><%= f.label :content,"内容" %></th>
       <td class="col-md-8 col-xs-8"><%= f.text_area :content %></td>
     <tr>
-      <th class="col-md-4 col-xs-4"><%= f.label :image,"画像" %></th>
+      <th class="col-md-4 col-xs-4"><%= f.label :post_image,"画像" %></th>
       <td class="col-md-8 col-xs-8">
         <%= image_tag(@post.post_image.url) if @post.post_image && @post.post_image.url %>
-        <%= f.file_field :image %>
-        <%= f.hidden_field :image_cache %>
+        <%= f.file_field :post_image %>
+        <%= f.hidden_field :post_image_cache %>
       </td>
     <tr>
       <th></th>

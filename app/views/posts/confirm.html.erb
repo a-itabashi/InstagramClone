@@ -1,0 +1,38 @@
+<h1>この内容で投稿しますか?</h1>
+
+
+<%= form_with(model: @post, url: posts_path, local: true) do |f| %>
+  <%= f.hidden_field :title %>
+  <%= f.hidden_field :content %>
+  <%= f.hidden_field :post_image_cache %>
+
+  <table class="table">
+    <tr>
+      <th class="col-md-4 col-xs-4"><h2>題名</h2></th>
+      <td class="col-md-8 col-xs-8"><%= @post.title %></td>
+    </tr>
+      <th class="col-md-4 col-xs-4"><h2>内容</h2></th>
+      <td class="col-md-8 col-xs-8"><%= @post.content %></td>
+    <tr>
+      <th class="col-md-4 col-xs-4"><h2>画像</h2></th>
+      <td class="col-md-8 col-xs-8">
+        <%= image_tag(@post.post_image.url) if @post.post_image && @post.post_image.url %>
+      </td>
+    <tr>
+      <th></th>
+      <td><%= f.submit "投稿" %></td>
+    </tr>
+  </table>
+<% end %>
+
+<%= form_with(model: @post, url: new_post_path, local: true, method: :get) do |f| %>
+  <%= f.hidden_field :title %>
+  <%= f.hidden_field :content %>
+  <%= f.hidden_field :post_image_cache %>  
+  <table class="table">
+    <tr>
+      <th></th>
+      <td class="back-btn"><%= f.submit "戻る", name: "back" %></td>
+    </tr>
+  </table>
+<% end %>
