@@ -28,11 +28,6 @@ class PostsController < ApplicationController
   def show
     @favorite = current_user.favorites.find_by(post_id: @post.id)
     @favorites= @post.favorite_users
-
-
-
-    # @favorite = current_user.favorites.find_by(post_id: @post.id)
-    # @favorites = Favorite.where(post_id: @post.id)
   end
 
   def confirm
