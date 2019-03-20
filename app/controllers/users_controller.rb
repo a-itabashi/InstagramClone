@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_params, only:[:edit, :show, :update, :destroy, :likes]
 
-  def index
-  end
-
   def new
     @user = User.new
   end
