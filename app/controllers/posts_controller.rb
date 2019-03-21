@@ -39,9 +39,13 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update(post_params)
-    flash[:success] = "投稿が編集されました"
-    redirect_to posts_path
+    if @post.update(post_params)
+      flash[:success] = "投稿が編集されました"
+      redirect_to posts_path
+    else
+      flash.now[:info] = "もう一度やり直してください"
+      render 'edit'
+    end
   end
 
   def destroy
