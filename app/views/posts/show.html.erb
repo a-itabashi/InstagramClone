@@ -14,6 +14,5 @@
 &nbsp
 <h1>この投稿をお気に入りしたユーザー一覧</h1>
   <% @favorites.each do |favorite| %>
-<!--      <%= image_tag(favorite.user_image.url,class: "member-img") if favorite.user_image && favorite.user_image.url %> -->
      <%= favorite.name %>
   <% end %>
