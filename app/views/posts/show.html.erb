@@ -1,5 +1,5 @@
 <% unless @post.user_id == current_user.id %>
-  <% if @favorites.present? %>
+  <% if @favorite.present? %>
       <h2>この投稿のお気に入りを解除しますか？<h2>
       <div class="like-btn">
         <%= link_to "解除する", favorite_path(id: @favorite.id), method: :delete, class: "btn btn-danger" %>
