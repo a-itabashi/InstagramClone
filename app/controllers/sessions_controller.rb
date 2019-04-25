@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
       flash.now[:info] = "もう一度入力し直してください。"
       render 'new'
     end
-    user && user.authenticate(params[:session][:password])
     session[:user_id] = user.id
     flash[:success] = "ログインしました"
     redirect_to posts_path
