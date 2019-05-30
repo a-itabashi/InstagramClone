@@ -2,4 +2,4 @@
 
 * powered by Aguru Itabashi
 
-## test@gmail.com
+## `test@gmail.com`
